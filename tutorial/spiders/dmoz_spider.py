@@ -43,7 +43,7 @@ class Lottery(CrawlSpider):
     ]
     rules = [
         #Rule(LinkExtractor(allow=('history(_)?([1-3])?\.jspx\?_ltype=pls')), callback='parse_page', follow=True),
-        Rule(LinkExtractor(allow=('history(_)?(\d){1,}\.jspx\?_ltype=pls')), callback='parse_page', follow=True),
+        Rule(LinkExtractor(allow=('history(_\d{1,})?\.jspx\?_ltype=pls')), callback='parse_page', follow=True),
     ]
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0'}
 
